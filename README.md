@@ -4,6 +4,8 @@
 This Google Earth Engine (GEE) application allows users to generate cloud-free mosaics from Sentinel-2 Level 2A imagery for a user-defined period and geographical region. 
 Users can select a country, specify a date range, apply cloud-masking techniques, and visualize different layers such as NDVI and false color composites.
 
+# [Run the application](https://danielp.users.earthengine.app/view/sentinel2-cloudfree-mosaic-generator)
+
 ![image](https://github.com/user-attachments/assets/ef929d59-1280-4257-bed7-7452738ab67c)
 
 
@@ -26,11 +28,11 @@ Users can select a country, specify a date range, apply cloud-masking techniques
 6. Click the **"Generate"** button to process and display the mosaic.
 7. Optionally, export the mosaic and NDVI images to Google Drive by running [the GEE code in the Code Editor](https://code.earthengine.google.com/6c515edd7192668ccf73e5b7635aeee2) (it requires a GEE account and a cloud project).
 
-## Requirements
+## Requirements for data download to Google Drive by running [the GEE code in the Code Editor](https://code.earthengine.google.com/6c515edd7192668ccf73e5b7635aeee2)
 - A **Google Earth Engine** account.
 - Internet access and a compatible web browser.
-- A **Google Cloud Project** for exporting images.
-
+- A **Google Cloud Project**.
+- 
 ## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on [GitHub](https://github.com/palubad/S2-Mosaic-Generator).
 
