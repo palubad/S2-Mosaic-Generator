@@ -4,9 +4,9 @@
 This Google Earth Engine (GEE) application allows users to generate cloud-free mosaics from Sentinel-2 Level 2A imagery for a user-defined period and geographical region. 
 Users can select a country, specify a date range, apply cloud-masking techniques, and visualize different layers such as NDVI and false color composites.
 
-# [Run the application](https://danielp.users.earthengine.app/view/sentinel2-cloudfree-mosaic-generator)
+<h2 align="center"> <a href="https://danielp.users.earthengine.app/view/sentinel2-cloudfree-mosaic-generator">Run the application</a> </h2>
 
-![image](https://github.com/user-attachments/assets/ef929d59-1280-4257-bed7-7452738ab67c)
+[![image](https://github.com/user-attachments/assets/ef929d59-1280-4257-bed7-7452738ab67c)](https://danielp.users.earthengine.app/view/sentinel2-cloudfree-mosaic-generator)
 
 
 ## Features
