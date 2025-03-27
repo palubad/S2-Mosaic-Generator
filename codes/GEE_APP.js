@@ -16,7 +16,7 @@ panel.add(appText3)
 
 var appText51 = ui.Label('To download the composites, ', {fontSize:'12px', margin:'8px 0px 0px 8px'});
 var appLink51 = ui.Label('run the GEE code in the browser', {fontWeight: 'italic', fontSize: '12px', margin:'8px 0px 0px 3px',color:'blue'})
-  .setUrl('https://code.earthengine.google.com/6c515edd7192668ccf73e5b7635aeee2');
+  .setUrl('https://code.earthengine.google.com/45af642b0bee985ccfeed5dae80baf1a');
 var appText5 = ui.Label('(requires a GEE account and cloud project)', {fontSize:'12px', margin:'8px 0px 0px 8px'});
 
 panel.add(ui.Panel([appText51, appLink51],ui.Panel.Layout.flow('horizontal')));
@@ -39,9 +39,9 @@ var intro = ui.Panel([
 // Add panel to the larger panel 
 panel.add(intro)
 // Load FAO GAUL dataset to get available countries
-var countries = ee.FeatureCollection("FAO/GAUL/2015/level0").sort('ADM0_NAME');
-var countryList = countries.aggregate_array('ADM0_NAME').getInfo();
-var countryCodes = countries.aggregate_array('ADM0_CODE').getInfo();
+var countries = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017").sort('country_na');
+var countryList = countries.aggregate_array('country_na').getInfo();
+var countryCodes = countries.aggregate_array('country_co').getInfo();
 
 // Create country dictionary
 var countryDict = {};
@@ -53,7 +53,7 @@ for (var i = 0; i < countryList.length; i++) {
 var countrySelector = ui.Select({
   items: Object.keys(countryDict),
   placeholder: 'Select a country',
-  value: 'Czech Republic'
+  value: 'Czechia'
 });
 
 panel.add((ui.Panel([ui.Label('Select a country', {margin:'12px 0px 0px 8px'}), countrySelector],ui.Panel.Layout.flow('horizontal'))))
@@ -94,7 +94,7 @@ panel.add(falseColorCheckbox);
 
 // Function to get country boundaries
 function getCountryGeometry(countryName) {
-  var countryGeom = countries.filter(ee.Filter.eq('ADM0_NAME', countryName)).geometry();
+  var countryGeom = countries.filter(ee.Filter.eq('country_na', countryName)).geometry();
   return countryGeom;
 }
 
@@ -173,5 +173,5 @@ panel.add(runButton);
 ui.root.insert(0, panel);
 
 // Set default map center to Czech Republic
-var defaultCountryGeom = getCountryGeometry('Czech Republic');
+var defaultCountryGeom = getCountryGeometry('Czechia');
 Map.centerObject(defaultCountryGeom, 6);
