@@ -10,7 +10,7 @@ Users can select a country, specify a date range, apply cloud-masking techniques
 
 
 ## Features
-- **Country Selection:** Select a country from a dropdown list dynamically populated from the FAO GAUL dataset.
+- **Country Selection:** Select a country from a dropdown list dynamically populated from the LSIB 2017: Large Scale International Boundary Polygons that were simplified.
 - **Cloud-Free Mosaic Generation:** Sentinel-2 Level 2A imagery is processed to create a composite with minimal cloud cover.
 - **CloudScore+ Cloud Masking:** Optionally apply an advanced cloud-masking technique to enhance mosaic quality.
 - **Custom Date Range:** Define a specific time range to generate the mosaic.
